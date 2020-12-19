@@ -1,19 +1,23 @@
-$color-one: #515151;
+$color-first: #3d371b;
 $color-second: #FFC53D;
-$color-bg: #FAFAFF;
+$color-third: #FAFAFF;
+$color-black: #222222;
+$color-white: #FAFAFF;
+
+$x: 1em;
 
 * {
   box-sizing: border-box;
 }
 
 @mixin transition-ease {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @function text-color($color) {
   @if (lightness($color) > 40%) {
-    @return #222222;
+    @return $color-black;
   } @else {
-    @return #FFFFFF;
+    @return $color-white;
   }
 }
