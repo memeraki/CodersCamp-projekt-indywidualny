@@ -1,8 +1,9 @@
 @import "reset";
 @import "config";
+@import "form";
+@import "animation";
 
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap');
 
 body {
   color: text-color($color-white);
@@ -10,6 +11,10 @@ body {
   font-size: 18px;
   letter-spacing: .06em;
   line-height: 1.5em;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 li {
@@ -44,6 +49,66 @@ i {
   }
 }
 
+header {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  nav {
+    margin: 2em auto;
+    font-weight: 300;
+
+    .anim {
+      margin: 0 .5em;
+
+      &:first-child{
+        margin-left: 0px;
+      }
+
+      &:last-child{
+        margin-right: 0px;
+      }
+        
+      animation: animacja .8s ease-out;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: ($i * .5s) + .25s;
+        }
+      }
+    }
+  }
+}
+
+.full-width {
+  height: 150px;
+  width: 100%;
+  background: url(#);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  //background-origin: ;
+  //-webkit-text-fill-color: transparent;
+  //-webkit-background-clip: text;
+  position: relative;
+
+  background-color: pink; // usuń
+  
+  h2 {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 // do zmiany!
 
@@ -73,78 +138,3 @@ button {
     outline: none;
   }
 }
-
-// dostosować
-
-form {
-  width: 300px;
-  height: 400px; 
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-  align-items: center;
-
-  input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid text-color($color-white);
-    color: text-color($color-white);
-    font-family: 'Bellota Text', cursive;
-    font-size: 1em;
-    font-weight: 300;
-
-    &:focus {
-      outline: none;
-      border-bottom-color: $color-second;
-    }
-
-    &::placeholder {
-      color: $color-first; // do zmiany
-      font-family: 'Bellota Text', cursive;
-      letter-spacing: 0.1em;
-      font-size: .7em;
-    }
-  }
-  
-  textarea {
-    background-color: transparent;
-    height: 100px;
-    resize: none;
-
-    border-bottom: 2px solid text-color($color-white);
-    color: text-color($color-white);
-    font-family: 'Bellota Text', cursive;
-    font-size: 1em;
-    font-weight: 300;
-
-    &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
-      background-color: #F5F5F5;
-    }
-
-    &::-webkit-scrollbar {
-      width: 12px;
-      background-color: #F5F5F5;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-      background-color: $color-second;
-    }
-
-    &:focus {
-      outline: none;
-      border-bottom-color: $color-second;
-    }
-
-    &::placeholder {
-      color: $color-first; // do zmiany
-      font-family: 'Bellota Text', cursive;
-      letter-spacing: 0.1em;
-      font-size: .7em;
-      }
-  }
-}
-

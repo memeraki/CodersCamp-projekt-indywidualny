@@ -1,0 +1,11 @@
+@keyframes animacja {
+  0% {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  100% {
+    text-decoration: underline;
+    //background-color: red; // dostosować
+    mix-blend-mode: overlay; // dostosować
+  }
+}

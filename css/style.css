@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -46,71 +46,6 @@ table {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  color: #222222;
-  font-family: 'Bellota Text', cursive;
-  font-size: 18px;
-  letter-spacing: .06em;
-  line-height: 1.5em;
-}
-
-li {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-  color: #3d371b;
-}
-
-a:hover {
-  color: #FFC53D;
-}
-
-h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-h2 {
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 1.5em;
-}
-
-i {
-  color: #222222;
-}
-
-i:hover {
-  color: #FFC53D;
-}
-
-button {
-  border-radius: 10px;
-  font-weight: bold;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #222222;
-  border-color: #222222;
-  width: 150px;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #FFC53D;
-  color: #222222;
-}
-
-button:active {
-  border-color: #FFC53D;
-  background-color: #FFC53D;
-  color: #222222;
-}
-
-button:focus {
-  outline: none;
 }
 
 form {
@@ -182,5 +117,150 @@ form textarea::placeholder {
   font-family: 'Bellota Text', cursive;
   letter-spacing: 0.1em;
   font-size: .7em;
+}
+
+@keyframes animacja {
+  0% {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  100% {
+    text-decoration: underline;
+    mix-blend-mode: overlay;
+  }
+}
+
+body {
+  color: #222222;
+  font-family: 'Bellota Text', cursive;
+  font-size: 18px;
+  letter-spacing: .06em;
+  line-height: 1.5em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #3d371b;
+}
+
+a:hover {
+  color: #FFC53D;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1.5em;
+}
+
+i {
+  color: #222222;
+}
+
+i:hover {
+  color: #FFC53D;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  margin: 2em auto;
+  font-weight: 300;
+}
+
+header nav .anim {
+  margin: 0 .5em;
+  animation: animacja .8s ease-out;
+}
+
+header nav .anim:first-child {
+  margin-left: 0px;
+}
+
+header nav .anim:last-child {
+  margin-right: 0px;
+}
+
+header nav .anim:nth-child(1) {
+  animation-delay: 0.75s;
+}
+
+header nav .anim:nth-child(2) {
+  animation-delay: 1.25s;
+}
+
+header nav .anim:nth-child(3) {
+  animation-delay: 1.75s;
+}
+
+header nav .anim:nth-child(4) {
+  animation-delay: 2.25s;
+}
+
+.full-width {
+  height: 150px;
+  width: 100%;
+  background: url(#);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-color: pink;
+}
+
+.full-width h2 {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+.full-width span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #222222;
+  border-color: #222222;
+  width: 150px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #FFC53D;
+  color: #222222;
+}
+
+button:active {
+  border-color: #FFC53D;
+  background-color: #FFC53D;
+  color: #222222;
+}
+
+button:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
