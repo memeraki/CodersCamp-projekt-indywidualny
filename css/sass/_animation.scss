@@ -1,11 +1,18 @@
-@keyframes animacja {
+
+@keyframes up-down {
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes wings-move {
   0% {
-    background-color: transparent;
-    text-decoration: none;
+    transform: translateY(110px);
+  }
+  50% {
+    transform: translateY(40px);
   }
   100% {
-    text-decoration: underline;
-    //background-color: red; // dostosować
-    mix-blend-mode: overlay; // dostosować
+    transform: translateY(110px);
   }
 }

@@ -24,6 +24,7 @@ li {
 a {
   text-decoration: none;
   color: $color-first;
+  font-weight: 700;
 
   &:hover {
     color: $color-second;
@@ -31,14 +32,16 @@ a {
 }
 
 h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: serif;
+  display: inline;
+  line-height: 2rem;
+  font-size: 2em;
 }
 
 h2 {
   font-weight: bold;
   font-variant: small-caps;
   font-size: 1.5em;
-  
 }
 
 i {
@@ -50,17 +53,88 @@ i {
 }
 
 header {
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+
+  .container {
+    min-width: 300px;
+    max-width: 600px;
+    padding: 2em;
+    position: relative;
+
+    p {
+      line-height: 2em;
+
+      span {
+        font-family: serif;
+        font-weight: 700;
+        color: $color-second;
+      }
+    }
+
+    .aside {
+      color: $color-second;
+      position: absolute;
+      width: 250px;
+      right: 1em;
+      top: 13em;
+    }
+
+    .circle {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      /*background: url("../img/img.jpg");
+      background-position: center;
+      background-size: cover;*/
+      shape-outside: circle() margin-box;
+      margin: 20px;
+      float: left;
+      border-radius: 50%;
+      box-shadow: 1px 1px 10px -1px $color-black;
+
+      .my-fly {
+        position: relative;
+        left: 40%;
+        top: 40%;
+        height: 30px;
+        animation-name: up-down;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+
+        .my-fly:nth-child(2) {
+          animation-delay: 0.5s;
+        }
+
+        #wing1, #wing2 {
+          animation-name: wings-move;
+          animation-duration: 0.3s;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-color: $color-second;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 50%;
+        mix-blend-mode: hue;  //normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|difference|exclusion|hue|saturation|color|luminosity;
+      }
+    }
+  }
 
   nav {
-    margin: 2em auto;
+    margin: 1em auto 2em;
     font-weight: 300;
 
-    .anim {
+    ul li {
       margin: 0 .5em;
 
       &:first-child{
@@ -70,31 +144,24 @@ header {
       &:last-child{
         margin-right: 0px;
       }
-        
-      animation: animacja .8s ease-out;
-
-      @for $i from 1 through 4 {
-        &:nth-child(#{$i}) {
-          animation-delay: ($i * .5s) + .25s;
-        }
-      }
     }
   }
 }
 
 .full-width {
-  height: 150px;
+  height: 100px;
   width: 100%;
-  background: url(#);
-  background-size: cover;
+  position: relative;
+  box-shadow: 0px -5px 10px -5px $color-black;
+  //background: url("../img/bg.jpg");
+  /*background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  //background-origin: ;
-  //-webkit-text-fill-color: transparent;
-  //-webkit-background-clip: text;
-  position: relative;
-
-  background-color: pink; // usuń
+  background-origin: border-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: relative;*/
   
   h2 {
     position: absolute;
@@ -110,6 +177,49 @@ header {
   }
 }
 
+.projects {
+  width: 100%;
+  box-shadow: 0px 5px 10px -5px $color-black;
+}
+
+footer {
+  box-shadow: 0px -5px 10px -5px $color-black;
+
+  div {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &:first-child {
+      background-color: $color-first;
+      color: text-color($color-first);
+      text-align: center;
+      padding: 2em;
+      box-shadow: 0px 5px 10px -5px $color-black;
+
+      p {
+       font-style: italic;
+      }
+
+      p:nth-child(3) {
+        margin-top: 5em;
+      }
+
+      span {
+        font-size: .6em;
+        font-style: normal;
+      }
+    }
+
+    &:last-child {
+      padding: 3em;
+    }
+  }
+}
+
+
 // do zmiany!
 
 button {
@@ -119,19 +229,19 @@ button {
   background-color: transparent;
   color: text-color($color-white);
   border-color: text-color($color-white);
-  width: 150px;
+  width: auto;
 
   @include transition-ease;
 
   &:hover {
-    background-color: $color-second;
-    color: text-color($color-second);
+    background-color: $color-third;
+    color: text-color($color-third);
   }
 
   &:active {
-    border-color: $color-second;
-    background-color: $color-second;
-    color: text-color($color-second);
+    border-color: $color-third;
+    background-color: $color-third;
+    color: text-color($color-third);
   }
   
   &:focus {
