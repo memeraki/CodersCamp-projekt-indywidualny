@@ -136,6 +136,192 @@ form textarea::placeholder {
   }
 }
 
+.projects {
+  background-color: pink;
+  width: 100%;
+  margin: 1em;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 1em 1em;
+}
+
+.projects .item {
+  background-color: black;
+}
+
+.projects .item:nth-child(9) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(10) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(11) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(12) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(13) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(14) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(15) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(16) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects .item:nth-child(17) {
+  height: 5em;
+  width: 5em;
+}
+
+.projects input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+}
+
+.projects input[type=checkbox] + label {
+  position: relative;
+  height: 3em;
+  cursor: pointer;
+}
+
+.projects input[type=checkbox] + label:before {
+  content: '';
+  position: absolute;
+  top: .5em;
+  left: -1em;
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  background-blend-mode: saturation;
+}
+
+.projects input[type=checkbox] + label[for=html]:before {
+  background: url("../img/html5-brands-check.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=css]:before {
+  background: url("../img/css3-alt-brands-check.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=js]:before {
+  background: url("../img/js-brands-check.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=code]:before {
+  background: url("../img/code-solid-check.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label:after {
+  content: '';
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=html]:after {
+  background: url("../img/html5-brands.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=css]:after {
+  background: url("../img/css3-alt-brands.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=js]:after {
+  background: url("../img/js-brands.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox] + label[for=code]:after {
+  background: url("../img/code-solid.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects input[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.projects input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.projects input[type=checkbox]:not:checked + label:before {
+  opacity: 1;
+}
+
+.projects input[type=checkbox]:checked + label:before {
+  opacity: 0;
+}
+
+.projects input[type=checkbox]:checked + label[for=html] ~ .html {
+  background: green;
+}
+
+.projects input[type=checkbox]:checked + label[for=css] ~ .css {
+  background: orange;
+}
+
+.projects input[type=checkbox]:checked + label[for=js] ~ .js {
+  background: yellow;
+}
+
+.projects input[type=checkbox]:checked + label[for=code] ~ .code {
+  background: blue;
+}
+
 body {
   color: #222222;
   font-family: 'Bellota Text', cursive;
