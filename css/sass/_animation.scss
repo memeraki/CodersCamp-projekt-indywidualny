@@ -1,18 +1,6 @@
 
-@keyframes up-down {
+@keyframes anim {
   50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes wings-move {
-  0% {
-    transform: translateY(110px);
-  }
-  50% {
-    transform: translateY(40px);
-  }
-  100% {
-    transform: translateY(110px);
+    transform: scale(1.2);
   }
 }
