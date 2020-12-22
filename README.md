@@ -12,6 +12,8 @@ Projekt wizualny prezentowanej strony został stworzony przez autora.
 
 Projekt jest ukończony.
 
+![Projekt wizualny](./img/zrzut.png)
+
 ##### W projekcie można zobaczyć takie zagadnienia związane z HTML & CSS jak: 
 - Box-model
 - Kaskadowość CSS
