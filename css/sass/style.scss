@@ -55,7 +55,7 @@ i {
   }
 
   &:first-child:hover {
-    animation: back .8s ease-in-out infinite;
+    animation: back 1s ease-in-out infinite;
     color: $color-second;
   }
 }
