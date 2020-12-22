@@ -1,15 +1,19 @@
 $color-first: #0A2D11;
 $color-second: #bf741d;
-$color-third: #9a8873;
 $color-black: #222222;
 $color-white: #FAFAFF;
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 @mixin transition-ease {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin boxshadow {
+  box-shadow: 0 7px 5px -5px $color-black,
+              0 -12px 5px -10px $color-black;
 }
 
 @function text-color($color) {

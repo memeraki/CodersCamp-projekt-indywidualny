@@ -1,26 +1,76 @@
 .projects {
-  background-color: pink;
+  background: $color-white;
   width: 100%;
-  //margin: 1em;
-  padding: 1em;
+  padding: 2em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
   justify-items: center;
-  grid-gap: 1em 1em;
+  grid-gap: .5em .5em;
 
 
-  .item {
-    background-color: black;
+  .item {    
+    cursor: pointer;
+    position: relative;
+    
 
     @for $i from 9 through 17 {
       &:nth-child(#{$i}) {
-        height: 5em;
-        width: 5em;
+        overflow: hidden;
+        filter: blur(3px);
+        transform: scale(.95);
+        @include transition-ease;
+        height: 10em;
+        width: 100%;
+
+        span {
+          position: absolute;
+          bottom: -100%;
+          left: 0px;
+          background-color: $color-white;
+          width: 100%;
+          text-align: center;
+          padding: .5em;
+          @include transition-ease;
+          @include boxshadow;
+        }
+
+        &:hover {
+          filter: none;
+          transform: scale(1);
+          @include boxshadow;
+
+          span {
+            bottom: 0px;
+          }
+
+          &::before {
+            content: url("../img/external-link-alt-solid.svg");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -75%);
+            width: 25%;
+            filter: drop-shadow(1px 2px 2px $color-black);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25%;
+            filter: drop-shadow(1px 2px 2px $color-black);
+            
+          }
+        }
       }
     }
   }
+
+
 
 
   input[type=checkbox] {
@@ -30,8 +80,7 @@
   
   input[type=checkbox] + label {
     position: relative;
-    height: 3em;
-    cursor: pointer;
+    height: 5em;
   }
   
   input[type=checkbox] + label:before {
@@ -46,8 +95,6 @@
     background-blend-mode: saturation;
   }
   input[type=checkbox] + label[for=html]:before {
-    
-    
     background: url("../img/html5-brands-check.svg");
     background-size: contain;
     background-position: center;
@@ -114,32 +161,40 @@
     opacity: 0;
   }
 
-  input[type=checkbox]:checked + label:after {
+  input[type=checkbox]:checked + label:after, input[type=checkbox]:hover + label:after {
     opacity: 1;
   }
 
-  input[type=checkbox]:not:checked + label:before {
+  input[type=checkbox]:not(:checked) + label:before {
     opacity: 1;
   }
 
-  input[type=checkbox]:checked + label:before {
+  input[type=checkbox]:checked + label:before, input[type=checkbox]:hover + label:before {
     opacity: 0;
   }
 
-  input[type=checkbox]:checked + label[for=html] ~ .html {
-    background: green;
+  input[type=checkbox]:checked + label[for=html] ~ .html, input[type=checkbox]:hover + label[for=html] ~ .html {
+    filter: none;
+    transform: scale(1);
+    @include boxshadow;
   }
 
-  input[type=checkbox]:checked + label[for=css] ~ .css {
-    background: orange;
+  input[type=checkbox]:checked + label[for=css] ~ .css, input[type=checkbox]:hover + label[for=css] ~ .css {
+    filter: none;
+    transform: scale(1);
+    @include boxshadow;
   }
 
-  input[type=checkbox]:checked + label[for=js] ~ .js {
-    background: yellow;
+  input[type=checkbox]:checked + label[for=js] ~ .js, input[type=checkbox]:hover + label[for=js] ~ .js {
+    filter: none;
+    transform: scale(1);
+    @include boxshadow;
   }
 
-  input[type=checkbox]:checked + label[for=code] ~ .code {
-    background: blue;
+  input[type=checkbox]:checked + label[for=code] ~ .code, input[type=checkbox]:hover + label[for=code] ~ .code {
+    filter: none;
+    transform: scale(1);
+    @include boxshadow;
   }
 
 }

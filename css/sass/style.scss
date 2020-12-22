@@ -5,6 +5,7 @@
 @import "project";
 
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
   color: text-color($color-white);
@@ -26,10 +27,6 @@ a {
   text-decoration: none;
   color: $color-first;
   font-weight: 700;
-/*
-  &:hover {
-    color: $color-second;
-  }*/
 }
 
 h1 {
@@ -37,21 +34,31 @@ h1 {
   display: inline;
   line-height: 2rem;
   font-size: 2em;
+  font-family: 'Bebas Neue', cursive;
 }
 
 h2 {
-  font-weight: bold;
   font-variant: small-caps;
   font-size: 1.5em;
+  letter-spacing: .3em;
+  font-family: 'Bebas Neue', cursive;
 }
 
 i {
   color: text-color($color-first);
+  margin: 0px .2em;
+  @include transition-ease;
 
   &:hover {
-    color: $color-third;
+    transform: scale(1.5);
+    color: $color-second;
   }
 }
+
+img {
+  width: 100%;
+}
+
 
 header {
   display: flex;
@@ -70,8 +77,7 @@ header {
       line-height: 2em;
 
       span {
-        font-family: serif;
-        font-weight: 700;
+        font-family: 'Bebas Neue', cursive;
         color: $color-second;
       }
     }
@@ -81,7 +87,7 @@ header {
       position: absolute;
       width: 250px;
       right: 1em;
-      top: 11em;
+      top: 13em;
       background-color: $color-second;
       z-index: -1;
     }
@@ -97,6 +103,7 @@ header {
       margin: 20px;
       float: left;
       border-radius: 50%;
+      @include boxshadow;
 
       &::before {
         content: '';
@@ -113,7 +120,7 @@ header {
   }
 
   nav {
-    margin: 2em auto 2em;
+    margin: 3em auto 2em;
     font-size: 1em;
 
     ul li {
@@ -141,7 +148,7 @@ header {
         right: 51%;
         bottom: 0;
         background: $color-first;
-        height: 2px;
+        height: 1px;
         @include transition-ease;
       }
 
@@ -153,36 +160,31 @@ header {
   }
 }
 
-
-@import "media";
-
 .full-width {
-  height: 100px;
-  width: 100%;
+  height: 250px;
+  width: 90%;
   position: relative;
-  //background: url("../img/bg.jpg");
-  /*background-size: cover;
+  text-align: center;
+  color: text-color($color-first);
+  @include boxshadow;
+
+  background-color: $color-first;
+  background: url("../img/bg1.jpg"), url("../img/img1.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-origin: border-box;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  position: relative;*/
-  background-color: $color-first;
-  color: text-color($color-first);
-  
-  h2 {
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
-  }
+  background-blend-mode: multiply;
 
-  span {
+  
+  div, h2 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  p {
+    margin-bottom: 1em;
   }
 }
 
@@ -191,19 +193,26 @@ header {
 }
 
 footer {
+  margin: 1em auto;
 
   div {
     height: 500px;
     width: 100%;
+    padding: 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
     &:first-child {
       background-color: $color-first;
+      background: url("../img/img3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include boxshadow;
+
       color: text-color($color-first);
       text-align: center;
-      padding: 2em;
 
       p {
        font-style: italic;
@@ -220,26 +229,40 @@ footer {
     }
 
     &:last-child {
-      padding: 3em;
+      max-width: 700px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        right: 1em;
+        top: 1em;
+        background-color: $color-second;
+        z-index: -1;
+      }
     }
   }
 }
 
 button {
-  border-radius: 5px;
   font-family: 'Bellota Text', cursive;
   font-size: 1rem;
   padding: 1em 2em;
-  background-color: transparent;
   color: text-color($color-first);
-  background-color: $color-first;
+  background: $color-first url("../img/texture1.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   border: none;
   width: auto;
+  outline: none;
   
   display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  @include boxshadow;
   @include transition-ease;
 
   &:hover, &:focus, &:active {
@@ -248,4 +271,18 @@ button {
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
 }
+
+
+
+@import "media";
