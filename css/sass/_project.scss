@@ -9,12 +9,10 @@
   justify-items: center;
   grid-gap: .5em .5em;
 
-
   .item {    
     cursor: pointer;
     position: relative;
     
-
     @for $i from 9 through 18 {
       &:nth-child(#{$i}) {
         overflow: hidden;
@@ -69,7 +67,6 @@
       }
     }
   }
-
 
   input[type=checkbox] {
     visibility: hidden;
@@ -194,5 +191,4 @@
     transform: scale(1);
     @include boxshadow;
   }
-
 }

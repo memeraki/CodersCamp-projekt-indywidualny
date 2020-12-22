@@ -124,7 +124,7 @@ header {
         top: 0px;
         left: 0px;
         border-radius: 50%;
-        mix-blend-mode: overlay;  //normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|difference|exclusion|hue|saturation|color|luminosity;
+        mix-blend-mode: overlay;
       }
     }
   }
@@ -147,7 +147,6 @@ header {
       display: inline-block;
       position: relative;
       overflow: hidden;
-      
       transform: perspective(1px) translateZ(0);
 
       &:before {
@@ -185,7 +184,6 @@ header {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
 
-  
   div, h2 {
     position: absolute;
     left: 50%;
@@ -196,10 +194,6 @@ header {
   p {
     margin-bottom: 1em;
   }
-}
-
-.projects {
-  width: 100%;
 }
 
 footer {
@@ -261,7 +255,7 @@ button {
   font-size: 1rem;
   padding: 1em 2em;
   color: text-color($color-first);
-  background: $color-first url("../img/texture1.png");
+  background: $color-first;
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -276,23 +270,9 @@ button {
   @include transition-ease;
 
   &:hover, &:focus, &:active {
-    -webkit-transform: scale(0.8);
     transform: scale(0.8);
-    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-  }
 }
-
-
 
 @import "media";
