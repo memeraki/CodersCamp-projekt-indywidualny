@@ -50,7 +50,7 @@ i {
   font-size: 1.8em;
 
   &:not(:first-child):hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     color: $color-second;
   }
 
@@ -229,7 +229,7 @@ footer {
       }
 
       p:nth-child(3) {
-        margin-top: 5em;
+        margin-top: 2em;
       }
 
       span {

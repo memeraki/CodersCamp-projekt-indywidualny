@@ -785,7 +785,7 @@ i {
 }
 
 i:not(:first-child):hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   color: #bf741d;
 }
 
@@ -960,7 +960,7 @@ footer div:first-child p {
 }
 
 footer div:first-child p:nth-child(3) {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 footer div:first-child span {
