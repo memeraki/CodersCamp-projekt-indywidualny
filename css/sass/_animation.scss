@@ -1,6 +1,12 @@
 
-@keyframes anim {
+@keyframes avatar {
   50% {
     transform: scale(1.2);
+  }
+}
+
+@keyframes back {
+  50% {
+    transform: translateY(-.3em);
   }
 }

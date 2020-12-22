@@ -49,6 +49,10 @@ table {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 form {
   height: 400px;
   display: flex;
@@ -119,9 +123,15 @@ form textarea::placeholder {
   font-size: .7em;
 }
 
-@keyframes anim {
+@keyframes avatar {
   50% {
     transform: scale(1.2);
+  }
+}
+
+@keyframes back {
+  50% {
+    transform: translateY(-0.3em);
   }
 }
 
@@ -762,9 +772,8 @@ h1 {
 }
 
 h2 {
-  font-variant: small-caps;
   font-size: 1.5em;
-  letter-spacing: .3em;
+  letter-spacing: .2em;
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -772,10 +781,16 @@ i {
   color: #FAFAFF;
   margin: 0px .2em;
   transition: all 0.3s ease-in-out;
+  font-size: 1.8em;
 }
 
-i:hover {
+i:not(:first-child):hover {
   transform: scale(1.5);
+  color: #bf741d;
+}
+
+i:first-child:hover {
+  animation: back .8s ease-in-out infinite;
   color: #bf741d;
 }
 
@@ -829,6 +844,11 @@ header .container .circle {
   float: left;
   border-radius: 50%;
   box-shadow: 0 7px 5px -5px #222222, 0 -12px 5px -10px #222222;
+  transform: perspective(1px) translateZ(0);
+}
+
+header .container .circle:hover {
+  animation: avatar .3s linear 1;
 }
 
 header .container .circle::before {

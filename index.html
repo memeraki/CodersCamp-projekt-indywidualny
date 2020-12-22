@@ -8,10 +8,9 @@
   <script src="https://kit.fontawesome.com/01eec95b07.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
+  <header id="start">
     <div class="container">
       <div class="circle">
-        
       </div>
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua. At lectus urna <span>MAŁGORZATA DZIEWIT</span> convallis tellus id interdum velit. Bibendum est ultricies integer quis auctor elit sed vulputate mi. Felis bibendum ut. Quis commodo odio aenean sed. Ut sem nulla pharetra diam sit amet nisl suscipit. Ipsum a arcu cursus vitae congue mauris rhoncus.</p>
       <p>Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere.</p>
@@ -25,13 +24,13 @@
     <nav>
       <ul>
         <li><a href="">więcej</a></li>
-        <li><a href="">projekty</a></li>
-        <li><a href="">kontakt</a></li>
+        <li><a href="#projects">projekty</a></li>
+        <li><a href="#contact">kontakt</a></li>
       </ul>
     </nav>
   </header>
-  <section class="full-width">
-    <h2>projekty</h2>
+  <section class="full-width" id="projects">
+    <h2>znane i technologie oraz ich wykorzystanie w projektach</h2>
   </section>
   <section class="projects">
     <input class="item" type="checkbox" name="color" id="html"/>
@@ -85,7 +84,7 @@
       <p>Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere.</p>
       <p><span>Stona powstała w ramach pierwszego projektu CodersCamp 2020. Wykorzystuje HTML i CSS → SASS. Zdjęcia znajdujące się na strone (poza avatarem) pochodzą z kolekcji prywatnej i ich kopiowanie i wykorzystywanie bez zgody autora jest zabronione.</span></p>
 		</div>
-		<div>
+		<div id="contact">
 			<form>
 				<input type="text" id="name" placeholder="Twoje imię">
 				<input type="email" id="email" placeholder="Twój e-mail">
@@ -96,6 +95,7 @@
   </footer>
   <div class="full-width">
     <div>
+      <a href="#start"><i class="fas fa-chevron-circle-up up-animation"></i></a>
       <p>Projekt i realizacja Małgorzata Dziewit</p>
       <i class="fab fa-facebook fa-2x"></i>
       <i class="fab fa-instagram fa-2x"></i>

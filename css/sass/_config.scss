@@ -7,6 +7,10 @@ $color-white: #FAFAFF;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @mixin transition-ease {
   transition: all 0.3s ease-in-out;
 }

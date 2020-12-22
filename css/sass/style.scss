@@ -38,9 +38,8 @@ h1 {
 }
 
 h2 {
-  font-variant: small-caps;
   font-size: 1.5em;
-  letter-spacing: .3em;
+  letter-spacing: .2em;
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -48,9 +47,15 @@ i {
   color: text-color($color-first);
   margin: 0px .2em;
   @include transition-ease;
+  font-size: 1.8em;
 
-  &:hover {
+  &:not(:first-child):hover {
     transform: scale(1.5);
+    color: $color-second;
+  }
+
+  &:first-child:hover {
+    animation: back .8s ease-in-out infinite;
     color: $color-second;
   }
 }
@@ -104,6 +109,11 @@ header {
       float: left;
       border-radius: 50%;
       @include boxshadow;
+
+      transform: perspective(1px) translateZ(0);
+      &:hover {
+        animation: avatar .3s linear 1;
+      }
 
       &::before {
         content: '';
