@@ -841,7 +841,7 @@ i:not(:first-child):hover {
 }
 
 i:first-child:hover {
-  animation: back .8s ease-in-out infinite;
+  animation: back 1s ease-in-out infinite;
   color: #bf741d;
 }
 
@@ -878,7 +878,7 @@ header .container .aside {
   width: 250px;
   height: 250px;
   right: 1em;
-  top: 50%;
+  top: 30%;
   background-color: #bf741d;
   z-index: -1;
 }
