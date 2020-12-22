@@ -83,16 +83,16 @@ header {
 
       span {
         font-family: 'Bebas Neue', cursive;
-        color: $color-second;
+        color: $color-first
       }
     }
 
     .aside {
-      color: $color-white;
       position: absolute;
       width: 250px;
+      height: 250px;
       right: 1em;
-      top: 13em;
+      top: 50%;
       background-color: $color-second;
       z-index: -1;
     }

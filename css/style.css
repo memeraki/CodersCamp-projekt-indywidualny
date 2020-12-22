@@ -163,7 +163,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(9) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -214,7 +214,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(10) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -265,7 +265,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(11) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -316,7 +316,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(12) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -367,7 +367,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(13) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -418,7 +418,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(14) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -469,7 +469,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(15) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -520,7 +520,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(16) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -571,7 +571,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(17) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -622,7 +622,7 @@ form textarea::placeholder {
 
 .projects .item:nth-child(18) span {
   position: absolute;
-  bottom: -100%;
+  bottom: -120%;
   left: 0px;
   background-color: #FAFAFF;
   width: 100%;
@@ -669,7 +669,7 @@ form textarea::placeholder {
 
 .projects input[type=checkbox] + label {
   position: relative;
-  height: 5em;
+  height: 3em;
 }
 
 .projects input[type=checkbox] + label:before {
@@ -870,15 +870,15 @@ header .container p {
 
 header .container p span {
   font-family: 'Bebas Neue', cursive;
-  color: #bf741d;
+  color: #0A2D11;
 }
 
 header .container .aside {
-  color: #FAFAFF;
   position: absolute;
   width: 250px;
+  height: 250px;
   right: 1em;
-  top: 13em;
+  top: 50%;
   background-color: #bf741d;
   z-index: -1;
 }
@@ -1070,10 +1070,6 @@ button::before {
 }
 
 @media screen and (min-width: 768px) {
-  header .container .aside {
-    right: -1em;
-    top: 9em;
-  }
   nav {
     margin-top: 4em;
   }
@@ -1085,12 +1081,6 @@ button::before {
   }
   footer div {
     max-width: 700px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .projects {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

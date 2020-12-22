@@ -1,9 +1,4 @@
 @include media-md {
-  header .container .aside {
-    right: -1em;
-    top: 9em;
-  }
-
   nav {
     margin-top: 4em;
   }
@@ -19,17 +14,5 @@
       max-width: 700px;
     }
   }
-
-}
-
-@include media-lg {
-  
-}
-
-@include media-xl {
-  
-  .projects {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }  
 
 }
