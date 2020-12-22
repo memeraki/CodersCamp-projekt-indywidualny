@@ -611,6 +611,57 @@ form textarea::placeholder {
   filter: drop-shadow(1px 2px 2px #222222);
 }
 
+.projects .item:nth-child(18) {
+  overflow: hidden;
+  filter: blur(3px);
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+  height: 10em;
+  width: 100%;
+}
+
+.projects .item:nth-child(18) span {
+  position: absolute;
+  bottom: -100%;
+  left: 0px;
+  background-color: #FAFAFF;
+  width: 100%;
+  text-align: center;
+  padding: .5em;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 7px 5px -5px #222222, 0 -12px 5px -10px #222222;
+}
+
+.projects .item:nth-child(18):hover {
+  filter: none;
+  transform: scale(1);
+  box-shadow: 0 7px 5px -5px #222222, 0 -12px 5px -10px #222222;
+}
+
+.projects .item:nth-child(18):hover span {
+  bottom: 0px;
+}
+
+.projects .item:nth-child(18):hover::before {
+  content: url("../img/external-link-alt-solid.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 25%;
+  filter: drop-shadow(1px 2px 2px #222222);
+}
+
+.projects .item:nth-child(18):hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  filter: drop-shadow(1px 2px 2px #222222);
+}
+
 .projects input[type=checkbox] {
   visibility: hidden;
   position: absolute;
